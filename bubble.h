@@ -10,6 +10,11 @@ class BubbleSort : public Sort {
 
         void execute() {
             // TODO
+            int i, j;
+            for (i = 0; i < size-1; i++)
+                for (j = 0; j < size-i-1; j++)
+                    if (elements[j] > elements[j+1])
+                        swap(elements[j], elements[j+1]);
         }
 
         inline string name() { return "BubbleSort"; }
